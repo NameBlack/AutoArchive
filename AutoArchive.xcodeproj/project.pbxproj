@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A88FEE079FD7157CFDE5A724 /* Pods_AutoArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A4F124B10C429DA19E55FA /* Pods_AutoArchive.framework */; };
+		F4547DC123541DF6005A2C38 /* ly_helperFile.m in Sources */ = {isa = PBXBuildFile; fileRef = F4547DC023541DF6005A2C38 /* ly_helperFile.m */; };
 		F49A417E234DD0A700350256 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F49A417D234DD0A700350256 /* AppDelegate.m */; };
 		F49A4181234DD0A700350256 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F49A4180234DD0A700350256 /* ViewController.m */; };
 		F49A4184234DD0A700350256 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F49A4182234DD0A700350256 /* Main.storyboard */; };
@@ -20,6 +21,8 @@
 		5E7312175C367005BF4844C1 /* Pods-AutoArchive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoArchive.release.xcconfig"; path = "Target Support Files/Pods-AutoArchive/Pods-AutoArchive.release.xcconfig"; sourceTree = "<group>"; };
 		6EE8ABBB506D1093A7570E47 /* Pods-AutoArchive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoArchive.debug.xcconfig"; path = "Target Support Files/Pods-AutoArchive/Pods-AutoArchive.debug.xcconfig"; sourceTree = "<group>"; };
 		B7A4F124B10C429DA19E55FA /* Pods_AutoArchive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4547DBF23541DF6005A2C38 /* ly_helperFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ly_helperFile.h; sourceTree = "<group>"; };
+		F4547DC023541DF6005A2C38 /* ly_helperFile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ly_helperFile.m; sourceTree = "<group>"; };
 		F49A4179234DD0A700350256 /* AutoArchive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoArchive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F49A417C234DD0A700350256 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F49A417D234DD0A700350256 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,6 +64,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F4547DBA23541A5A005A2C38 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F4547DBF23541DF6005A2C38 /* ly_helperFile.h */,
+				F4547DC023541DF6005A2C38 /* ly_helperFile.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		F49A4170234DD0A700350256 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +103,7 @@
 				F49A4187234DD0AA00350256 /* LaunchScreen.storyboard */,
 				F49A418A234DD0AA00350256 /* Info.plist */,
 				F49A418B234DD0AA00350256 /* main.m */,
+				F4547DBA23541A5A005A2C38 /* Helper */,
 			);
 			path = AutoArchive;
 			sourceTree = "<group>";
@@ -191,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4547DC123541DF6005A2C38 /* ly_helperFile.m in Sources */,
 				F49A4181234DD0A700350256 /* ViewController.m in Sources */,
 				F49A418C234DD0AA00350256 /* main.m in Sources */,
 				F49A417E234DD0A700350256 /* AppDelegate.m in Sources */,
