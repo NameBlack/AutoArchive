@@ -10,7 +10,7 @@ scheme_name=""
 
 # AppStore上传账号、密码
 AppStore_key="";
-AppStore_issuer="-17c2-423d-ba98-7cae59fc18fa";
+AppStore_issuer="";
 
 # 蒲公英发布Ukey、Api_key
 PGY_UKey="";
