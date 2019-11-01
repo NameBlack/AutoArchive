@@ -6,5 +6,6 @@ target 'AutoArchive' do
   use_frameworks!
 
   # Pods for AutoArchive
+  pod 'PodDemoBlack', '~> 0.1.0'
 
 end

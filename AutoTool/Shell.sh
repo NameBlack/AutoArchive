@@ -4,13 +4,13 @@
 # TeamID
 Team_ID=""
 # 工程名称
-project_name="AutoArchive"
+project_name=""
 # 工程Scheme
-scheme_name="AutoArchive"
+scheme_name=""
 
 # AppStore上传账号、密码
-Dev_username="开发者账号";
-Dev_password="开发者密码";
+AppStore_key="";
+AppStore_issuer="-17c2-423d-ba98-7cae59fc18fa";
 
 # 蒲公英发布Ukey、Api_key
 PGY_UKey="";
@@ -24,7 +24,7 @@ while ([ $Tag_output != 1 ] && [ $Tag_output != 2 ] && [ $Tag_output != 3 ] && [
 done
 
 # ============选择编译方式============"
-if [ $Tag_output != 1 ];then
+if [ "$Tag_output" != 1 ];then
     Tag_build=0;
     while ([ $Tag_build != 1 ] && [ $Tag_build != 2 ]) do
         echo "选择编译方式(输入序号) 【 1:Release 2:Debug 】\n"
@@ -33,12 +33,12 @@ if [ $Tag_output != 1 ];then
 fi
 
 # ============配置导出文件============"
-if [ $Tag_output == 1 -o $Tag_build == 1 ];then
+if [ "$Tag_output" == 1 -o "$Tag_build" == 1 ];then
     configuration="Release";
 else
     configuration="Debug";
 fi
-case $Tag_output in
+case "$Tag_output" in
     1) method="app-store";;
     2) method="ad-hoc";;    
     3) method="enterprise";;
@@ -110,14 +110,14 @@ fi
 
 # 工程编译结果
 if [ -e ${archive_path} -a $?=0 ];then
-    echo "****    Archive  Success    ****"; 
+    echo "\n\n****    Archive  Success    ****"; 
 else
-    echo "****    Archive  Failure    ****";
+    echo "\n\n****    Archive  Failure    ****";
     echo "=================================="
     exit
 fi
 
-echo "===========开始导出工程===========\n"
+echo "===========开始导出工程===========\n\n"
 # 导出命令
 xcodebuild -exportArchive -archivePath ${archive_path} \
 -configuration ${configuration} \
@@ -136,38 +136,31 @@ else
 fi
 
 # 文件上传、发布操作
-if [ $Tag_output = 1 ];then
-
-    # AppStore上传工具
-    altoolPath="/Applications/Xcode.app/Contents/Applications/Application Loader.app/Contents/Frameworks/ITunesSoftwareService.framework/Versions/A/Support/altool"
+if [ "$Tag_output" = 1 ];then
     echo "=========AppStore(验证APP)========\n\n"
     # AppStore验证命令
-    "${altoolPath}" --validate-app \
-    -f $ipa_path     \
-    -u $Dev_username \
-    -p $Dev_password \
-    --output-format xml
+    xcrun altool --validate-app -f $ipa_path -t ios --apiKey $AppStore_key --apiIssuer $AppStore_issuer -quiet
+
     # AppStore验证结果
     if [ $? != 0 ];then
-        echo "\n****    AppStore验证失败    ****";
+        echo "\n\n****    AppStore验证失败    ****";
         break;
+    else
+        echo "\n\n****    AppStore验证成功    ****";
     fi
 
     echo "=========AppStore(上传APP)========\n\n"
     # AppStore上传命令
-    "${altoolPath}" --upload-app \
-    -f $ipa_path     \
-    -u $Dev_username \
-    -p $Dev_password \
-    --output-format xml
+    xcrun altool --upload-app -f $ipa_path -t ios --apiKey $AppStore_key --apiIssuer $AppStore_issuer -quiet     
+
     # AppStore上传结果
     if [ $? != 0 ];then
-        echo "\n****    AppStore上传失败    ****";
+        echo "\n\n****    AppStore上传失败    ****";
     else
-        echo "\n****    AppStore上传成功    ****";
+        echo "\n\n****    AppStore上传成功    ****";
     fi
 else
-    echo "============蒲公英发布============\n"
+    echo "============蒲公英发布============\n\n"
     # 蒲公英发布命令
     RESULT=$(curl -F "file=@$ipa_path" \
             -F "uKey=${PGY_UKey}"      \

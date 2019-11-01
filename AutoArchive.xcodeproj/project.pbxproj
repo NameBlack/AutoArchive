@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A88FEE079FD7157CFDE5A724 /* Pods_AutoArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A4F124B10C429DA19E55FA /* Pods_AutoArchive.framework */; };
+		7DD5E9822A53E25E9DDD8732 /* Pods_AutoArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53BAC452035DDB489667795B /* Pods_AutoArchive.framework */; };
 		F4547DC123541DF6005A2C38 /* ly_helperFile.m in Sources */ = {isa = PBXBuildFile; fileRef = F4547DC023541DF6005A2C38 /* ly_helperFile.m */; };
+		F4799FD82356B159004D4A32 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = F4799FD72356B159004D4A32 /* NotificationService.m */; };
+		F4799FDC2356B159004D4A32 /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F4799FD42356B159004D4A32 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F49A417E234DD0A700350256 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F49A417D234DD0A700350256 /* AppDelegate.m */; };
 		F49A4181234DD0A700350256 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F49A4180234DD0A700350256 /* ViewController.m */; };
 		F49A4184234DD0A700350256 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F49A4182234DD0A700350256 /* Main.storyboard */; };
@@ -17,12 +19,41 @@
 		F49A418C234DD0AA00350256 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F49A418B234DD0AA00350256 /* main.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F4799FDA2356B159004D4A32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F49A4171234DD0A700350256 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4799FD32356B159004D4A32;
+			remoteInfo = NotificationService;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F4799FE02356B159004D4A32 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F4799FDC2356B159004D4A32 /* NotificationService.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		53BAC452035DDB489667795B /* Pods_AutoArchive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7312175C367005BF4844C1 /* Pods-AutoArchive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoArchive.release.xcconfig"; path = "Target Support Files/Pods-AutoArchive/Pods-AutoArchive.release.xcconfig"; sourceTree = "<group>"; };
 		6EE8ABBB506D1093A7570E47 /* Pods-AutoArchive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoArchive.debug.xcconfig"; path = "Target Support Files/Pods-AutoArchive/Pods-AutoArchive.debug.xcconfig"; sourceTree = "<group>"; };
-		B7A4F124B10C429DA19E55FA /* Pods_AutoArchive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4547DBF23541DF6005A2C38 /* ly_helperFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ly_helperFile.h; sourceTree = "<group>"; };
 		F4547DC023541DF6005A2C38 /* ly_helperFile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ly_helperFile.m; sourceTree = "<group>"; };
+		F4799FD42356B159004D4A32 /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4799FD62356B159004D4A32 /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
+		F4799FD72356B159004D4A32 /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
+		F4799FD92356B159004D4A32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4799FE12356B170004D4A32 /* NotificationService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotificationService.entitlements; sourceTree = "<group>"; };
 		F49A4179234DD0A700350256 /* AutoArchive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoArchive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F49A417C234DD0A700350256 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F49A417D234DD0A700350256 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -36,11 +67,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F4799FD12356B159004D4A32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F49A4176234DD0A700350256 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A88FEE079FD7157CFDE5A724 /* Pods_AutoArchive.framework in Frameworks */,
+				7DD5E9822A53E25E9DDD8732 /* Pods_AutoArchive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +97,7 @@
 		B91FFFC7BD1FDCCA1E2590A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B7A4F124B10C429DA19E55FA /* Pods_AutoArchive.framework */,
+				53BAC452035DDB489667795B /* Pods_AutoArchive.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -73,10 +111,22 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		F4799FD52356B159004D4A32 /* NotificationService */ = {
+			isa = PBXGroup;
+			children = (
+				F4799FE12356B170004D4A32 /* NotificationService.entitlements */,
+				F4799FD62356B159004D4A32 /* NotificationService.h */,
+				F4799FD72356B159004D4A32 /* NotificationService.m */,
+				F4799FD92356B159004D4A32 /* Info.plist */,
+			);
+			path = NotificationService;
+			sourceTree = "<group>";
+		};
 		F49A4170234DD0A700350256 = {
 			isa = PBXGroup;
 			children = (
 				F49A417B234DD0A700350256 /* AutoArchive */,
+				F4799FD52356B159004D4A32 /* NotificationService */,
 				F49A417A234DD0A700350256 /* Products */,
 				4A19A5EBB578EABB8337CD9D /* Pods */,
 				B91FFFC7BD1FDCCA1E2590A2 /* Frameworks */,
@@ -87,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				F49A4179234DD0A700350256 /* AutoArchive.app */,
+				F4799FD42356B159004D4A32 /* NotificationService.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,6 +162,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F4799FD32356B159004D4A32 /* NotificationService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4799FDF2356B159004D4A32 /* Build configuration list for PBXNativeTarget "NotificationService" */;
+			buildPhases = (
+				F4799FD02356B159004D4A32 /* Sources */,
+				F4799FD12356B159004D4A32 /* Frameworks */,
+				F4799FD22356B159004D4A32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotificationService;
+			productName = NotificationService;
+			productReference = F4799FD42356B159004D4A32 /* NotificationService.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		F49A4178234DD0A700350256 /* AutoArchive */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F49A418F234DD0AA00350256 /* Build configuration list for PBXNativeTarget "AutoArchive" */;
@@ -119,10 +187,13 @@
 				F49A4175234DD0A700350256 /* Sources */,
 				F49A4176234DD0A700350256 /* Frameworks */,
 				F49A4177234DD0A700350256 /* Resources */,
+				70E555ACF02438153086524D /* [CP] Embed Pods Frameworks */,
+				F4799FE02356B159004D4A32 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F4799FDB2356B159004D4A32 /* PBXTargetDependency */,
 			);
 			name = AutoArchive;
 			productName = AutoArchive;
@@ -135,11 +206,25 @@
 		F49A4171234DD0A700350256 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				DefaultBuildSystemTypeForWorkspace = Original;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = lyy;
 				TargetAttributes = {
+					F4799FD32356B159004D4A32 = {
+						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
 					F49A4178234DD0A700350256 = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -157,11 +242,19 @@
 			projectRoot = "";
 			targets = (
 				F49A4178234DD0A700350256 /* AutoArchive */,
+				F4799FD32356B159004D4A32 /* NotificationService */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F4799FD22356B159004D4A32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F49A4177234DD0A700350256 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -175,6 +268,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		70E555ACF02438153086524D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AutoArchive/Pods-AutoArchive-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AutoArchive/Pods-AutoArchive-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AutoArchive/Pods-AutoArchive-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E27E2FE3095474E550CD3D86 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -200,6 +310,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F4799FD02356B159004D4A32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4799FD82356B159004D4A32 /* NotificationService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F49A4175234DD0A700350256 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -212,6 +330,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F4799FDB2356B159004D4A32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4799FD32356B159004D4A32 /* NotificationService */;
+			targetProxy = F4799FDA2356B159004D4A32 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F49A4182234DD0A700350256 /* Main.storyboard */ = {
@@ -233,6 +359,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F4799FDD2356B159004D4A32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NotificationService/NotificationService.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PT78RJBJQ6;
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.km.AutoArchive.NotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F4799FDE2356B159004D4A32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NotificationService/NotificationService.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PT78RJBJQ6;
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.km.AutoArchive.NotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		F49A418D234DD0AA00350256 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -352,9 +520,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PT78RJBJQ6;
+				DEVELOPMENT_TEAM = T7M7KT7X2D;
 				INFOPLIST_FILE = AutoArchive/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -374,9 +542,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PT78RJBJQ6;
+				DEVELOPMENT_TEAM = T7M7KT7X2D;
 				INFOPLIST_FILE = AutoArchive/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -392,6 +560,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F4799FDF2356B159004D4A32 /* Build configuration list for PBXNativeTarget "NotificationService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4799FDD2356B159004D4A32 /* Debug */,
+				F4799FDE2356B159004D4A32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F49A4174234DD0A700350256 /* Build configuration list for PBXProject "AutoArchive" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -1,0 +1,6 @@
+framework module PodDemoBlack {
+  umbrella header "PodDemoBlack-umbrella.h"
+
+  export *
+  module * { export * }
+}

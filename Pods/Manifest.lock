@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: b9d0392d25f369a3a72124fec2bfe30bc7cc58eb
+PODS:
+  - PodDemoBlack (0.1.0)
 
-COCOAPODS: 1.7.5
+DEPENDENCIES:
+  - PodDemoBlack (~> 0.1.0)
+
+SPEC REPOS:
+  trunk:
+    - PodDemoBlack
+
+SPEC CHECKSUMS:
+  PodDemoBlack: 6b98d46f68b3c50f9a7e7f52069b82ec0e0ccf1c
+
+PODFILE CHECKSUM: 0c8180a35db2e6411f8c2fb632654e940f423d05
+
+COCOAPODS: 1.8.3
