@@ -8,8 +8,8 @@
   - Team_ID：自动签名的组织号码
   - project_name：工程名称
   - scheme_name：工程编译别名
-  - Dev_username：AppStore上传账号
-  - Dev_password：AppStore上传密码
+  - AppStore_key：   AppStore上传key
+  - AppStore_issuer：AppStore上传issuer
   - PGY_UKey：蒲公英发布使用UKey
   - PGY_AKey：蒲公英发布使用API_Key
 ```
@@ -22,8 +22,8 @@
   scheme_name="AutoArchive"
 
   # AppStore上传账号、密码
-  Dev_username="开发者账号";
-  Dev_password="开发者密码";
+  AppStore_key="开发者账号";
+  AppStore_issuer="开发者密码";
 
   # 蒲公英发布Ukey、Api_key
   PGY_UKey="";
